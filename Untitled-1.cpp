@@ -1,25 +1,30 @@
 #include <iostream>
 
+
 int main()
 {
   int S0 = 0, S1 = 1, S2 = 2, S3 = 3, S4 = 4, S5=5, S6=6;
-    int x;
+    char *x= new char[2];
     int x1 = 1, x2 = 2, x3 = 3, x4 = 4, x5 = 5, x6=6, x7=7, x_reset = 0;
+    char*operand=new char[17];
+    
     // char y1[]="Введена цифра", y2[]="Введен знак операции", y3[]="Операнд помещен в память через сумму", y4[]="Вывод результата подсчета",
     // y10[]="Операнд помещен в память через разность", y20[]="Вывод операнда, находящегося в памяти", y30[]="Память очистилась", y_reset[]="Поле данных очистилось";
     char y1, y2, y3, y4, y10, y20, y30, y_reset;
-    std::cin >> x;
+    
     int S=S0;
    
-
+for(int i=0; i<23; i++) {
+    std::cin >> x;
     switch (S){
     case 0:
-        if (x == x1)
+        if (x == "0" ||x == "1" || x == "2" || x == "3" || x == "4" || x == "5" || x == "6" || x == "7" || x == "8" || x == "9")
         {
+            strcpy(operand,x);
             S = S1; // сделали присвоение для перехода в следующее состояние S1
         }
         else {
- std::cout<<"ERROR"<<std::endl;
+ std::cout<<"ERROR"<<std::endl; return -1;
         }
         break;
     case 1:
@@ -35,7 +40,7 @@ int main()
         {
             S = S4;
         }
-        else if (x == x1)
+        else if (x == x1[0] ||x == x1[1] || x == x1[2] || x == x1[3] || x == x1[4] || x == x1[5] || x == x1[6] || x == x1[7] || x == x1[8] || x == x1[9])
         {
             //... не переходим (петля)
         }
@@ -48,7 +53,7 @@ int main()
             S = S2;
         }
         else {
-             std::cout<<"ERROR"<<std::endl;
+             std::cout<<"ERROR"<<std::endl;return -1;
         }
         break;
 
@@ -66,7 +71,7 @@ int main()
             S = S5;
         }
         else {
-             std::cout<<"ERROR"<<std::endl;
+             std::cout<<"ERROR"<<std::endl;return -1;
         }
         break;
 
@@ -80,7 +85,7 @@ int main()
             S = S0;
         }
         else {
-             std::cout<<"ERROR"<<std::endl;
+             std::cout<<"ERROR"<<std::endl;return -1;
         }
         break;
         
@@ -101,7 +106,7 @@ int main()
             S=S3;
         }
         else {
-             std::cout<<"ERROR"<<std::endl;
+             std::cout<<"ERROR"<<std::endl;return -1;
         }
         break;
     
@@ -116,7 +121,7 @@ int main()
             S = S1;
         }
         else {
-             std::cout<<"ERROR"<<std::endl;
+             std::cout<<"ERROR"<<std::endl;return -1;
         }
         break;
 
@@ -130,9 +135,10 @@ int main()
             S = S3;
         }
         else {
-             std::cout<<"ERROR"<<std::endl;
+             std::cout<<"ERROR"<<std::endl;return -1;
         }
         break;
     }
-    
+
+}
 }
