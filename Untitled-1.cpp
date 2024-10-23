@@ -21,7 +21,7 @@ int main()
         else {
  std::cout<<"ERROR"<<std::endl;
         }
-        break;
+       
     case 1:
         if (x == x2)
         {
@@ -50,7 +50,7 @@ int main()
         else {
              std::cout<<"ERROR"<<std::endl;
         }
-        break;
+       
 
     case 2:
         if (x == x2)
@@ -68,7 +68,7 @@ int main()
         else {
              std::cout<<"ERROR"<<std::endl;
         }
-        break;
+        
 
     case 3:
         if (x == x1)
@@ -82,7 +82,7 @@ int main()
         else {
              std::cout<<"ERROR"<<std::endl;
         }
-        break;
+        
         
 
     case 4:
@@ -103,7 +103,7 @@ int main()
         else {
              std::cout<<"ERROR"<<std::endl;
         }
-        break;
+        
     
     
     case 5:
@@ -118,7 +118,7 @@ int main()
         else {
              std::cout<<"ERROR"<<std::endl;
         }
-        break;
+        
 
     case 6:
     if (x == x_reset)
@@ -132,7 +132,7 @@ int main()
         else {
              std::cout<<"ERROR"<<std::endl;
         }
-        break;
+       
     }
     
 }
